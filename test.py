@@ -35,12 +35,9 @@ class NeuralNetwork():
     def think(self, inputs):
         #passing the inputs via the neuron to get output
         #converting values to floats
-        print(inputs)
-        print(self.synaptic_weights)
-        inputs = inputs.astype(float)
 
+        inputs = inputs.astype(float)
         output = self.sigmoid(np.dot(inputs, self.synaptic_weights))
-        print(output)
         return output
 
 
@@ -50,7 +47,7 @@ if __name__ == "__main__":
     neural_network = NeuralNetwork()
 
     print("Beginning Randomly Generated Weights: ")
-   #print(neural_network.synaptic_weights)
+    print(neural_network.synaptic_weights)
 
     #training data consisting of 4 examples--3 input values and 1 output
     training_inputs = np.array([[0,0,1],
@@ -61,10 +58,10 @@ if __name__ == "__main__":
     training_outputs = np.array([[0,1,1,0]]).T
 
     #training taking place
-    neural_network.train(training_inputs, training_outputs, 1)
+    neural_network.train(training_inputs, training_outputs, 15000)
 
     print("Ending Weights After Training: ")
-  #  print(neural_network.synaptic_weights)
+    print(neural_network.synaptic_weights)
 
     user_input_one = str(input("User Input One: "))
     user_input_two = str(input("User Input Two: "))

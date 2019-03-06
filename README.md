@@ -14,7 +14,7 @@ for 0 .. iteracje
   actual_result = sigmoid(input * weights) 
   // obliczenie różnicy między wyjściem danych treningowych a resultatem
   error = out - actual_result
-     /// pocho
+   /// pocho
   error_der = error dotMultiply? sigmoid`(actual_result)
   // obliczenie jak należy zmienić każdą z wag
   adjustments = input.T * error_der
@@ -22,4 +22,5 @@ for 0 .. iteracje
  ```
  
  Nowa Sytuacja
+ 
 ` 0 =~ sigmoid([0,1,0] * weights) `
