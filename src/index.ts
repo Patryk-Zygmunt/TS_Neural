@@ -8,9 +8,7 @@ var training_out=[[0,1,1,0]];
 
 var neuron = new Nueron(training_in,training_out)
 neuron.train(10000)
-var dd = math.multiply(math.matrix([0, 1,0]), neuron.weights)._data[0]
-var t = func.sigmoid(dd)
-console.log(neuron.calc([0, 1,1]));
+console.log(neuron.calc([0, 0,1]));
 
 
 

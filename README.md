@@ -1,3 +1,6 @@
+
+https://www.kdnuggets.com/2018/10/simple-neural-network-python.html
+
 Training Set
 ```
  input->   out->    weight->
